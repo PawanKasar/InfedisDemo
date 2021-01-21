@@ -17,6 +17,7 @@ import com.example.infedisassigment.presenter.RetroClient.RetrofitApiUtils;
 import com.example.infedisassigment.presenter.Utilities.CallingImportantMethod;
 import com.example.infedisassigment.presenter.adapter.NewsAdapter;
 import com.example.infedisassigment.presenter.interfaces.SubUrlInterface;
+import com.example.infedisassigment.view.activities.MainActivity;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -56,6 +57,7 @@ public class MainFragment extends Fragment {
     }
 
     private void initViews(View rootView){
+        MainActivity.titleMain.setText("News");
         rv_sliderNews = rootView.findViewById(R.id.rv_sliderNews);
         try{
             pd = new ProgressDialog(getActivity());

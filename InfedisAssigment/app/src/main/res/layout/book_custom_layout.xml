@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_3sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay1"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        android:id="@+id/viewForeground"
+        android:weightSum="2"
+        android:padding="@dimen/_5sdp">
+
+
+        <ImageView
+            android:id="@+id/iv_bookImage"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="fitXY"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#E9EFF7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:layout_marginLeft="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/tv_bookTitle"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:text="Happy"
+                android:textStyle="normal"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="bottom">
+
+                <TextView
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Publisher : "
+                    android:textSize="11sp"
+                    android:textStyle="normal"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_5sdp" />
+
+                <TextView
+                    android:id="@+id/tv_bookPublisher"
+                    android:paddingLeft="@dimen/_1sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dramatic Publishing"
+                    android:textSize="11sp"
+                    android:textStyle="normal"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_5sdp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+                <TextView
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Publish Year : "
+                    android:textSize="11sp"
+                    android:textStyle="normal"
+                    android:textAllCaps="false"/>
+
+                <TextView
+                    android:id="@+id/tv_bookPublishYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1949"
+                    android:textSize="11sp"
+                    android:textStyle="normal"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="@dimen/_5sdp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

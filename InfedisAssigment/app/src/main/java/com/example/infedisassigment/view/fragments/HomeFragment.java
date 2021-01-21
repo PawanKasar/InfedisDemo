@@ -71,18 +71,28 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.cv_news:
+                openMainFragment();
                 break;
 
             case R.id.cv_books:
+                openBookFragment();
                 break;
 
         }
     }
 
-    private void openFragment(){
+    private void openMainFragment(){
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(R.id.container, new HomeFragment())
+                .replace(R.id.container, new MainFragment())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    private void openBookFragment(){
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.container, new BookFragment())
                 .addToBackStack(null)
                 .commit();
     }

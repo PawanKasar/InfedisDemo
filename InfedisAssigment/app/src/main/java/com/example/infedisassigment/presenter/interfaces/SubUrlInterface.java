@@ -1,6 +1,7 @@
 package com.example.infedisassigment.presenter.interfaces;
 
 
+import com.example.infedisassigment.Model.BookModel;
 import com.example.infedisassigment.Model.NewsModel;
 
 import retrofit2.Call;
@@ -14,5 +15,8 @@ public interface SubUrlInterface {
 
     @GET("everything?q=bitcoin&from=2020-12-20&sortBy=publishedAt&apiKey=df6f74696d4c46c5a3852248dcc4b510")
     Call<NewsModel> getNewsDetails();
+
+    @GET("v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyDRRwEJ1xGZ7XP0PK9obBiuuBMPJw85UsI")
+    Call<BookModel> getBooks();
 
 }
